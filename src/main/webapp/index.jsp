@@ -1,3 +1,5 @@
+<%@ page import="java.sql.Connection" %>
+<%@ page import="com.DB.DBConnect" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -22,6 +24,10 @@
     <div class="container-fluid back-img ">
         <h2 class="text-center text-white">EBook Management System</h2>
     </div>
+
+    <% Connection conn = DBConnect.getConn();
+    System.out.println(conn);
+    %>
 
     <%-- Start Recent Books--%>
     <div class="container" >
