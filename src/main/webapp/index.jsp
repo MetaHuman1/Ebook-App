@@ -83,7 +83,7 @@
         </div>
 
         <div class="text-center mt-1">
-            <a href="" class="btn btn-danger btn-sm text-white">View All</a>
+            <a href="all_recent_books.jsp" class="btn btn-danger btn-sm text-white">View All</a>
         </div>
 
     </div>
@@ -126,7 +126,7 @@
 
         </div>
         <div class="text-center mt-1">
-            <a href="" class="btn btn-danger btn-sm text-white">View All</a>
+            <a href="all_new_book.jsp" class="btn btn-danger btn-sm text-white">View All</a>
         </div>
 
     </div>
@@ -141,7 +141,7 @@
 
             <%
                 BookDAOImpl dao3 = new BookDAOImpl(DBConnect.getConn());
-                List<BookDetails> list3 = dao2.getOldBook();
+                List<BookDetails> list3 = dao3.getOldBook();
                 for (BookDetails b : list3) {
             %>
             <div class="col-md-3">
@@ -167,7 +167,7 @@
         </div>
 
         <div class="text-center mt-1">
-            <a href="" class="btn btn-danger btn-sm text-white">View All</a>
+            <a href="all_old_book.jsp" class="btn btn-danger btn-sm text-white">View All</a>
         </div>
 
     </div>

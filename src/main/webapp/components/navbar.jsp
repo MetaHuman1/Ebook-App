@@ -26,16 +26,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.jsp">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="#"><i class="fas fa-book-open"></i> Recent book</a>
+                <a class="nav-link active" href="all_recent_books.jsp"><i class="fas fa-book-open"></i> Recent book</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#"><i class="fas fa-book-open"></i> New book</a>
+                <a class="nav-link" href="all_new_book.jsp"><i class="fas fa-book-open"></i> New book</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link disabled" href="#"><i class="fas fa-book"></i> Old Book</a>
+                <a class="nav-link disabled" href="all_old_book.jsp"><i class="fas fa-book"></i> Old Book</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
