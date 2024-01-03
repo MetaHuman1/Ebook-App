@@ -38,7 +38,8 @@ public class AddBookServlet extends HttpServlet {
             HttpSession session = req.getSession();
 
             if(f) {
-                String path = "C:\\Users\\ACER\\OneDrive\\Документы\\SpringBoot\\Ebook-App\\src\\main\\webapp\\book";
+//                String path = "C:\\Users\\ACER\\OneDrive\\Документы\\SpringBoot\\Ebook-App\\src\\main\\webapp\\book";
+                String path = getServletContext().getRealPath("")+"book";
                 File file = new File(path);
                 part.write(path+File.separator+fileName);
 

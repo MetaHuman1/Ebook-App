@@ -20,6 +20,11 @@
                         <c:remove var="failedMsg" scope="session"/>
                     </c:if>
 
+                    <c:if test="${not empty successMsg}">
+                        <h5 class="text-center text-success">${successMsg}</h5>
+                        <c:remove var="successMsg" scope="session"/>
+                    </c:if>
+
 
                     <form action="login" method="post">
                         <div class="form-group">
