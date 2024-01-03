@@ -57,7 +57,7 @@
                         Category:<%=b.getBookCategory()%>
                     </p>
                     <div class="row">
-                        <a href="" class="btn btn-success btn-sm ml-5">View Details</a>
+                        <a href="view_books.jsp?bid=<%=b.getId()%>" class="btn btn-success btn-sm ml-5">View Details</a>
                         <a href="" class="btn btn-danger btn-sm ml-1"><%=b.getPrice()%>
                             <i class="fas fa-ruble-sign"></i></a>
                     </div>
@@ -66,7 +66,7 @@
                         Category:<%=b.getBookCategory()%></p>
                         <div class="row">
                             <a href="" class="btn btn-danger btn-sm ml-2">Add cart</a>
-                            <a href="" class="btn btn-success btn-sm ml-1">View Details</a>
+                            <a href="view_books.jsp?bid=<%=b.getId()%>" class="btn btn-success btn-sm ml-1">View Details</a>
                             <a href="" class="btn btn-danger btn-sm ml-1"><%=b.getPrice()%>
                                 <i class="fas fa-ruble-sign"></i></a>
                         </div>
@@ -113,7 +113,7 @@
                         </p>
                         <div class="row text-center">
                             <a href="" class="btn btn-danger btn-sm ml-2">Add cart</a>
-                            <a href="" class="btn btn-success btn-sm ml-1">View Details</a>
+                            <a href="view_books.jsp?bid=<%=b.getId()%>" class="btn btn-success btn-sm ml-1">View Details</a>
                             <a href="" class="btn btn-danger btn-sm ml-1"><%=b.getPrice()%>
                                 <i class="fas fa-ruble-sign"></i></a>
                         </div>
@@ -154,7 +154,7 @@
                         <p><%=b.getAuthor()%>
                         </p>Category: <%=b.getBookCategory()%><p>
                         <div class="row text-center">
-                            <a href="" class="btn btn-success btn-sm ml-5">View Details</a>
+                            <a href="view_books.jsp?bid=<%=b.getId()%>" class="btn btn-success btn-sm ml-5">View Details</a>
                             <a href="" class="btn btn-danger btn-sm ml-1"><%=b.getPrice()%>
                                 <i class="fas fa-ruble-sign"></i></a>
                         </div>
