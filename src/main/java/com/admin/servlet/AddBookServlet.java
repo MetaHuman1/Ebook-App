@@ -14,7 +14,7 @@ import java.io.IOException;
 
 @WebServlet("/add_books")
 @MultipartConfig
-public class BooksAdd extends HttpServlet {
+public class AddBookServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try{

@@ -10,4 +10,19 @@ public interface BookDAO {
      boolean addBooks(BookDetails bookDetails);
 
     List<BookDetails> getAllBooks();
+
+    BookDetails getBookById(int id);
+
+    boolean updateEditBook(BookDetails bookDetails);
+
+    boolean deleteBook(int id);
 }
+
+
+
+
+
+
+
+
+
