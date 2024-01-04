@@ -1,4 +1,12 @@
+<%@ page import="com.entty.Cart" %>
+<%@ page import="com.DAO.CartDao" %>
+<%@ page import="com.DAO.CartDAOImpl" %>
+<%@ page import="com.DB.DBConnect" %>
+<%@ page import="com.entty.User" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page isELIgnored="false" %>
 <html>
 <head>
     <title>Cart Page</title>
@@ -6,6 +14,10 @@
 </head>
 <body style="background-color: #f0f1f2">
 <%@include file="components/navbar.jsp" %>
+
+<c:if test="${ empty userobj}">
+    <c:redirect url="login.jsp"></c:redirect>
+</c:if>
 <div class="row p-2">
     <div class="col-md-6">
         <div class="card bg-white">
@@ -21,24 +33,34 @@
                     </tr>
                     </thead>
                     <tbody>
+
+                    <%
+                        User user = (User) session.getAttribute("userobj");
+                        CartDAOImpl dao = new CartDAOImpl(DBConnect.getConn());
+                        List<Cart> list = dao.getBookByUser(user.getId());
+                        Double totalPrice = 0.0 ;
+                        for (Cart c : list) {
+                    totalPrice = c.getTotalPrice();
+                    %>
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <td><%=c.getBookName()%></td>
+                        <td><%=c.getAuthor()%></td>
+                        <td><%=c.getPrice()%></td>
+                        <a href="" class="btn btn-sm btn-danger">Remove</a>
                     </tr>
+                    <%
+                        }
+                    %>
+
                     <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
+                        <td>Total Price</td>
+                        <td></td>
+                        <td></td>
+                        <td><%=totalPrice%></td>
                     </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
+
+
+
                     </tbody>
                 </table>
             </div>

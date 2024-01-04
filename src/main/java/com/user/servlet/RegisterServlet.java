@@ -30,6 +30,8 @@ public class RegisterServlet extends HttpServlet{
             user.setEmail(email);
             user.setPhNo(phno);
             user.setPassword(password);
+            System.out.println(user.getId()+user.getName());
+
 
             HttpSession session = req.getSession();
 

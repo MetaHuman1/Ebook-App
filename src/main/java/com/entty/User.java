@@ -18,6 +18,19 @@ public class User {
     public User() {
     }
 
+    public User(int id, String name, String email, String password, String phNo, String address, String landmark, String city, String state, String pinCode) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.phNo = phNo;
+        this.address = address;
+        this.landmark = landmark;
+        this.city = city;
+        this.state = state;
+        this.pinCode = pinCode;
+    }
+
     public int getId() {
         return id;
     }
@@ -114,18 +127,6 @@ public class User {
                 '}';
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
-        return id == user.id && Objects.equals(name, user.name) && Objects.equals(email, user.email) && Objects.equals(password, user.password) && Objects.equals(phNo, user.phNo) && Objects.equals(address, user.address) && Objects.equals(landmark, user.landmark) && Objects.equals(city, user.city) && Objects.equals(state, user.state) && Objects.equals(pinCode, user.pinCode);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name, email, password, phNo, address, landmark, city, state, pinCode);
-    }
 }
 
 

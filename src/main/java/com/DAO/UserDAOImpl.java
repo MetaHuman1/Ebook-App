@@ -50,6 +50,7 @@ public class UserDAOImpl implements UserDAO{
             while (rs.next()) {
                 user=new User();
                 user.setId(rs.getInt(1));
+                System.out.println(user.getId());
                 user.setName(rs.getString(2));
                 user.setEmail(rs.getString(3));
                 user.setPhNo(rs.getString(4));
